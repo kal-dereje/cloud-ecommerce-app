@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+		"name": "Ecommerce API",
+		"description": "Ecommerce API collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Premium Wireless Headphones",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "High-quality wireless headphones with noise cancellation",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "199.99",
+							"type": "text"
+						},
+						{
+							"key": "discountPrice",
+							"value": "179.99",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Electronics",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "AudioPro",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "[\"wireless\", \"headphones\", \"audio\"]",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": ["{{base_url}}"],
+					"path": ["products"]
+				},
+				"description": "Add a new product to the store"
+			},
+			"response": [
+				{
+					"name": "Success Response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/products"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"body": "{\n  \"message\": \"Product created successfully\",\n  \"product\": {\n    \"id\": \"generated-uuid\",\n    \"name\": \"Premium Wireless Headphones\",\n    \"description\": \"High-quality wireless headphones with noise cancellation\",\n    \"price\": 199.99,\n    \"discountPrice\": 179.99,\n    \"stock\": 50,\n    \"category\": \"Electronics\",\n    \"brand\": \"AudioPro\",\n    \"tags\": [\"wireless\", \"headphones\", \"audio\"],\n    \"imageUrls\": [\"s3-url-for-uploaded-image\"],\n    \"timesOrdered\": 0,\n    \"createdAt\": \"2024-03-21T12:00:00.000Z\",\n    \"updatedAt\": \"2024-03-21T12:00:00.000Z\",\n    \"isActive\": true\n  }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://your-api-gateway-url.execute-api.region.amazonaws.com/prod",
+			"type": "string"
+		}
+	]
+} 

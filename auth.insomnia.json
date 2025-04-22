@@ -1,0 +1,192 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-03-21T12:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_1",
+      "parentId": null,
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Ecommerce Auth",
+      "description": "Authentication endpoints for Ecommerce API",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_1",
+      "parentId": "wrk_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Environment",
+      "data": {
+        "base_url": "https://jkcdvmn0tb.execute-api.us-east-1.amazonaws.com/prod",
+        "api_key": "YOUR_API_KEY_HERE"
+      },
+      "dataPropertyOrder": {
+        "&": ["base_url", "api_key"]
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_1",
+      "parentId": "wrk_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Authentication",
+      "description": "User authentication endpoints",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Sign Up",
+      "description": "Register a new user",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/signup",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"testuser@example.com\",\n  \"password\": \"Test@123\",\n  \"email\": \"testuser@example.com\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_2",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Confirm Sign Up",
+      "description": "Confirm user registration with verification code",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/confirm",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"testuser@example.com\",\n  \"code\": \"123456\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_3",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Sign In",
+      "description": "Sign in and get access token",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/signin",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"testuser@example.com\",\n  \"password\": \"Test@123\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_4",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Sign Up Admin",
+      "description": "Register a new admin user",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/signup",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"admin@example.com\",\n  \"password\": \"Admin@123\",\n  \"email\": \"admin@example.com\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_5",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Confirm Admin Sign Up",
+      "description": "Confirm admin registration with verification code",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/confirm",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"admin@example.com\",\n  \"code\": \"123456\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_6",
+      "parentId": "fld_1",
+      "modified": 1711008000000,
+      "created": 1711008000000,
+      "name": "Sign In Admin",
+      "description": "Sign in as admin and get access token",
+      "method": "POST",
+      "url": "{{ _.base_url }}/auth/signin",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"admin@example.com\",\n  \"password\": \"Admin@123\"\n}"
+      },
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "x-api-key",
+          "value": "{{ _.api_key }}"
+        }
+      ],
+      "_type": "request"
+    }
+  ]
+} 
