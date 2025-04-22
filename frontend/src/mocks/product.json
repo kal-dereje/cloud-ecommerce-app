@@ -1,0 +1,60 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "title": "Awesome T-Shirt",
+        "description": "A high-quality t-shirt that feels great.",
+        "price": 25.99,
+        "imageUrl": "/images/tshirt.jpg",
+        "rating": 4.5
+      },
+      {
+        "id": "2",
+        "title": "Stylish Jeans",
+        "description": "Comfortable and fashionable jeans for any occasion.",
+        "price": 59.99,
+        "imageUrl": "/images/jeans.jpg",
+        "rating": 4.2
+      },
+      {
+        "id": "3",
+        "title": "Cool Sneakers",
+        "description": "Perfect for running or casual wear.",
+        "price": 79.99,
+        "imageUrl": "/images/sneakers.jpg",
+        "rating": 4.8
+      },
+      {
+        "id": "4",
+        "title": "Elegant Watch",
+        "description": "A timeless piece to complement your style.",
+        "price": 129.99,
+        "imageUrl": "/images/watch.jpg",
+        "rating": 4.7
+      },
+      {
+        "id": "5",
+        "title": "Cozy Hoodie",
+        "description": "Stay warm and comfortable in this soft hoodie.",
+        "price": 49.99,
+        "imageUrl": "/images/hoodie.jpg",
+        "rating": 4.6
+      },
+      {
+        "id": "6",
+        "title": "Classic Cap",
+        "description": "A versatile cap to complete your look.",
+        "price": 19.99,
+        "imageUrl": "/images/cap.jpg",
+        "rating": 4.3
+      },
+      {
+        "id": "7",
+        "title": "Another Product",
+        "description": "Just another great item.",
+        "price": 39.99,
+        "imageUrl": "/images/another.jpg",
+        "rating": 4.4
+      }
+    ]
+  }
