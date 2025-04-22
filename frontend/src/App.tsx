@@ -15,7 +15,6 @@ import ManageProducts from './pages/ManageProducts';
 import ManageOrders from './pages/ManageOrders';
 import CustomerInfo from './pages/CustomerInfo';
 import { userAtom } from './atoms/userAtoms';
-import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Footer from './components/Footer';
 import Cognito from './pages/Cognito';

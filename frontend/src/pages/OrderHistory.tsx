@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Order, Product } from '../types/types';
-import { ArrowDownIcon, ArrowUpIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
+import { ArrowDownIcon,  ShoppingBagIcon } from '@heroicons/react/24/outline';
 import API from '../api';
 
-interface OrderItemDisplay {
-  productId: string;
-  quantity: number;
-  product?: Product;
-}
+// interface OrderItemDisplay {
+//   productId: string;
+//   quantity: number;
+//   product?: Product;
+// }
 
 interface OrderResponse {
   message: string;
@@ -226,7 +226,7 @@ const OrderHistory: React.FC = () => {
 
                 <div className="mt-4 p-4 bg-slate-50/50 rounded-2xl">
                   <p className="text-slate-600 mb-2">Shipping Address</p>
-                  <p className="text-slate-800">{order.shippingAddress}</p>
+                  <p className="text-slate-800">{"${order.shippingAddress}"}</p>
                 </div>
               </div>
             ))}

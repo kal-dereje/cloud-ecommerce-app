@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useAtom } from 'jotai';
 import { useNavigate, Link } from 'react-router-dom';
 import { userAtom } from '../atoms/userAtoms';
-import API from '../api';
-import { User } from '../types/types';
 import { mockSuccessfulLogin } from '../mocks/mock';
 
 const Login: React.FC = () => {

@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { mockGetAdminProducts, mockPostAdminProducts, mockDeleteAdminProducts, mockPutAdminProducts } from '../mocks/mock';
+import { mockGetAdminProducts, mockPostAdminProducts, mockDeleteAdminProducts } from '../mocks/mock';
 import { Product } from '../types/types';
 import { 
   PencilIcon, 
   TrashIcon, 
   PlusIcon, 
   ArrowPathIcon,
-  PhotoIcon,
   CurrencyDollarIcon,
   TagIcon,
   BuildingStorefrontIcon,
   CubeIcon,
-  StarIcon,
   XMarkIcon,
   ExclamationTriangleIcon,
   CheckCircleIcon

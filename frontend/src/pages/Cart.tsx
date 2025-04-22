@@ -15,6 +15,7 @@ const Cart: React.FC = () => {
     // Example: Fetch from API or context
     // const product = await API.get<Product>(`/products/${productId}`);
     // return product.data.imageUrls[0] || 'https://placehold.co/64x64';
+    console.log(productId);
     return 'https://placehold.co/64x64'; // Placeholder until product data is provided
   };
 

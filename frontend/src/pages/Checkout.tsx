@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { useNavigate } from 'react-router-dom';
 import { cartAtom } from '../atoms/cartAtom';
 import { userAtom } from '../atoms/userAtoms';
-import { CartItem, User } from '../types/types';
+import { CartItem } from '../types/types';
 import { CheckCircleIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 import API from '../api';
 
@@ -30,6 +30,7 @@ const Checkout: React.FC = () => {
     // Example: Fetch from API or context
     // const product = await API.get<Product>(`/products/${productId}`);
     // return { name: product.data.name, imageUrl: product.data.imageUrls[0] || 'https://placehold.co/80x80' };
+    console.log(productId);
     return { name: 'Product Name', imageUrl: 'https://placehold.co/80x80' }; // Placeholder
   };
 

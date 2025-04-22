@@ -4,7 +4,6 @@ import { useAtom } from 'jotai';
 import { ShoppingCartIcon, UserIcon, ChevronDownIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 import { cartAtom } from '../atoms/cartAtom';
 import { userAtom } from '../atoms/userAtoms';
-import API from '../api';
 
 const Header: React.FC = () => {
   const [cart] = useAtom(cartAtom);

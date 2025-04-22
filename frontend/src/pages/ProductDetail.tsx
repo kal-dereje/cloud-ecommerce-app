@@ -6,9 +6,9 @@ import { Product, CartItem } from '../types/types';
 import ReviewStars from '../components/ReviewStars';
 import API from '../api';
 
-interface RouteParams {
-  id: string;
-}
+// interface RouteParams {
+//   id: string;
+// }
 
 const ProductDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();

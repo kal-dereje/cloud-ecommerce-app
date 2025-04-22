@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAtom } from 'jotai';
 import { cartAtom } from '../atoms/cartAtom';
-import ReviewStars from './ReviewStars';
 import { Product, CartItem } from '../types/types';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
