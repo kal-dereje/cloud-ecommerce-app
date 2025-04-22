@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce-backend",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "node scripts/build-lambdas.mjs",
+    "zip": "powershell -ExecutionPolicy Bypass -File scripts/zip-all.ps1",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest --config jest.integration.config.js",
+    "test:api": "node scripts/test-api.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-lambda": "^3.787.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/client-sns": "^3.787.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "@aws-sdk/s3-request-presigner": "^3.0.0",
+    "@faker-js/faker": "^9.7.0",
+    "aws-lambda": "^1.0.7",
+    "busboy": "^1.6.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "aws-sdk-client-mock": "^3.0.0",
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "esbuild": "^0.20.0",
+    "jest": "^29.7.0",
+    "serverless": "^4.14.1",
+    "vitest": "^1.2.0"
+  }
+}

@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - npm install -g npm@latest
+      - cd src
+      - npm install
+
+  build:
+    commands:
+      - echo "Building Lambda functions..."
+      - npm run build
+
+  post_build:
+    commands:
+      - echo "Deploying Lambda functions..."
+      - aws lambda update-function-code --function-name $PRODUCTS_TABLE --zip-file fileb://dist/products.zip
+      - aws lambda update-function-code --function-name $PRODUCT_IMAGES_BUCKET --zip-file fileb://dist/product-images.zip
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: src/dist 
